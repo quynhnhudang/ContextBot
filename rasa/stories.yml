@@ -1,0 +1,19 @@
+stories:
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: goodbye user
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user provides information
+  steps:
+  - intent: inform
+    entities:
+    - name: John
+    - location: New York
+  - action: utter_ask_name
+  - action: utter_ask_location

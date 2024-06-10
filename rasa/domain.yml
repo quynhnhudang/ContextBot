@@ -1,0 +1,34 @@
+intents:
+  - greet
+  - goodbye
+  - inform
+
+entities:
+  - name
+  - location
+
+slots:
+  name:
+    type: text
+  location:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_ask_name:
+    - text: "What's your name?"
+  utter_ask_location:
+    - text: "Where are you located?"
+
+actions:
+  - action_greet
+  - action_goodbye
+  - action_ask_name
+  - action_ask_location
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
